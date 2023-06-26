@@ -23,7 +23,9 @@ dependencies {
     implementation 'com.github.itx-jd:Simple-TikTok-API:<version>'
 }
 ```
-Replace <version> with the latest version.
+Replace "version" with the appropiate release.
+
+Latest Release :  [![](https://jitpack.io/v/itx-jd/Simple-TikTok-API.svg)](https://jitpack.io/#itx-jd/Simple-TikTok-API)
 
 2- Add the following to the repositories section in your project's settings.gradle file:
 
