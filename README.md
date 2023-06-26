@@ -14,16 +14,26 @@ Simple-TikTok-API is an Android library that provides a simple way to fetch TikT
 
 ## Installation
 
-Simple-TikTok-API can be included in your Android project by adding the following dependency to your `build.gradle` file:
+Simple-TikTok-API can be included in your Android project by following two simple steps.
+
+1- Add the following dependency to your `build.gradle` file:
 
 ```groovy
 dependencies {
-    implementation 'com.github.itx-jd:Simple-TikTok-API:1.0.0'
-
+    implementation 'com.github.itx-jd:Simple-TikTok-API:<version>'
 }
 ```
+Replace <version> with the latest version.
 
-Replace <version> with the appropriate version of OkHttp and Jsoup.
+2- Add the following to the repositories section in your project's settings.gradle file:
+
+```groovy
+repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+```
+
 
 ## Quick Usage
 
@@ -34,9 +44,9 @@ TikTokAPI.getUserDetails("username", new TikTokAPI.TikTokUserListener() {
 
         // Handle the received user details
 
-        int followerCount = userDetails.getFollowerCount();
-        int followingCount = userDetails.getFollowingCount();
-        int totalLikes = userDetails.getTotalLikes();
+        String followerCount = userDetails.getFollowerCount();
+        String followingCount = userDetails.getFollowingCount();
+        String totalLikes = userDetails.getTotalLikes();
         boolean isVerified = userDetails.isVerified();
         boolean isPrivateAccount = userDetails.isPrivateAccount();
     }
@@ -60,18 +70,6 @@ TikTokAPI.getUserDetails("username", new TikTokAPI.TikTokUserListener() {
 
 ```
 Replace "username" with the actual TikTok username you want to fetch details for.
-
-## Requirements
-
-This project depends on the following:
-
-- Java 8+
-- OkHttp
-- Jsoup
-
-## Repository
-
-GitHub Repository: [itx-jd/Simple-TikTok-API](https://github.com/itx-jd/Simple-TikTok-API)
 
 ## Contribution
 
